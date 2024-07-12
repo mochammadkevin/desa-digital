@@ -13,27 +13,27 @@ function Menu() {
 
   const predefinedCategories = [
     {
-      icon: "./src/assets/icons/smart-agri.svg",
+      icon: "https://github.com/fitrianurynt/PSBO/assets/79956203/9a53a458-b8bd-488c-82a6-17b0b2a86c0a",
       title: "Pertanian Cerdas",
     },
     {
-      icon: "./src/assets/icons/agri-food.svg",
+      icon: "https://github.com/fitrianurynt/PSBO/assets/79956203/30cb9a40-cb83-4c3e-8950-cd6fd82a82db",
       title: "Pemasaran Agri-Food dan E-Commerce",
     },
     {
-      icon: "./src/assets/icons/e-government.svg",
+      icon: "https://github.com/fitrianurynt/PSBO/assets/79956203/8338ff39-61d6-4e78-895f-4f0577f699e1",
       title: "E-Government",
     },
     {
-      icon: "./src/assets/icons/information-system.svg",
+      icon: "https://github.com/cheishaamanda/capstone1/assets/90697739/12fd7714-7871-4956-b3e0-e6e62a495bfe",
       title: "Sistem Informasi",
     },
     {
-      icon: "./src/assets/icons/local-infrastructure.svg",
+      icon: "https://github.com/fitrianurynt/PSBO/assets/79956203/b4742250-5691-42ac-8a8a-6f9d5684b23b",
       title: "Infrastruktur Lokal",
     },
     {
-      icon: "./src/assets/icons/menu-all.svg",
+      icon: "https://github.com/fitrianurynt/PSBO/assets/79956203/41581f29-9da8-417c-b24d-07bad3acd60b",
       title: "Lihat Semua",
     },
   ];
