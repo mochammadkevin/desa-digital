@@ -1,4 +1,4 @@
-import { ath, db } from "../firebase/clientApp";
+import { auth, firestore } from "../firebase/clientApp";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { setDoc, doc } from "firebase/firestore";
 
@@ -16,7 +16,7 @@ type RegisterData = {
 //Login dengan Firebase
 export const login = async ({ email, password }: LoginData): Promise<any> => {
   try {
-    const userCredential = await signInWithEmailAndPassword(ath, email, password);
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
     return userCredential.user;
   } catch (error: any) {
     throw new Error(error.message || "An error occurred during authentication");
@@ -26,11 +26,11 @@ export const login = async ({ email, password }: LoginData): Promise<any> => {
 //Register dengan Firebase dan menyimpannya dii Firestore
 export const register = async ({ email, password, role }: RegisterData): Promise<any> => {
   try {
-    const userCredential = await createUserWithEmailAndPassword(ath, email, password);
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
 
     // Menyimpan data pengguna ke Firestore
-    await setDoc(doc(db, "users", user.uid), {
+    await setDoc(doc(firestore, "users", user.uid), {
       email: user.email,
       role: role
     });
